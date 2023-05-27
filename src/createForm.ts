@@ -69,6 +69,11 @@ export default class CreateForm {
             return message;
         }
     }
+    unountField = (name: string): void => {
+        if (this.form.has(name)) {
+         this.form = this.form.delete(name);
+        }
+    }
     getFormData = (): null | any => {
         const form: any = this.form.toJS();
         const keys: string[] = Object.keys(form);
@@ -92,6 +97,7 @@ export default class CreateForm {
             boundField: this.boundField,
             getFormData: this.getFormData,
             getFieldError: this.getFieldError,
+            unountField: this.unountField,
         }
     }
 

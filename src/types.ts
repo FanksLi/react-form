@@ -5,6 +5,7 @@ export interface FormType {
     setFieldValue: (naem: string, value: any) => void,
     boundField: (name: string, options: BoundOptionType) => void,
     getFieldError: (name: string) => string | undefined,
+    unountField: (name: string) => void,
     getFormData: () => any,
 }
 
